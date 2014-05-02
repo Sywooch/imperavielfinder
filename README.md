@@ -91,4 +91,14 @@ public function actions()
         )); 
 
 ```
+3 в тоже view файле `post/edit` подключаем elfinder, для это добавляем в файл контейнер и сам виджет
 
+```php
+$this->widget("application.extensions.ezzeelfinder.ElFinderWidget", array(
+    'selector' => "div#file-uploader",
+    'clientOptions' => array(
+        'lang' => "ru",
+        'resizable' => true,
+    ),
+));
+```
