@@ -16,6 +16,9 @@ imperavi elfinder
 Предположим у нас есть модуль `admin`, Контроллер `PostController`, модель `Post` и view `post/edit` для модели `Post`.
 Кроме этого у нас есть контроллер `FileController` в котором прописаны `action` для imperavi.
 
+
+1 в view `post\edit` подключаем виджет imperavi:
+
 <?php
 		 
  $this->widget('ImperaviRedactorWidget', array(
