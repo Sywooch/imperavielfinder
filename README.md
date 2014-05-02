@@ -59,7 +59,7 @@ public function actions()
                 ),
                  'extelf' => array(
                 'js' => array('extelf.js',),
-                ),
+                ), //подключаем плагин для работы с elfinder
 
                
                 
@@ -82,7 +82,7 @@ public function actions()
                 // 'iframe' => true,
                 'toolbar' => true,
 
-                'fmUrl'=>Yii::app()->createUrl('/admin/file/fileUploaderConnector'),
+                'fmUrl'=>Yii::app()->createUrl('/admin/file/fileUploaderConnector'), //ссылка на ElFinderConnectorAction
                
                 
 
@@ -115,7 +115,7 @@ $connectorOptions = array(
                     'path' => realpath(Yii::app()->basePath.'/../file'),
                     'URL' => Yii::app()->request->baseUrl .'/file',
                     'accessControl' => "access",
-                    'mimeDetect' => "internal",
+                    'mimeDetect' => "internal", //параметр должен быть заполнен !!!
                     'resizable' => true,
                     'locale' => 'ru_RU.UTF-8',
                 )   
