@@ -11,9 +11,10 @@ imperavi elfinder
 
 2 Подлкючение imperavi редактора
 
-<code> 
-    $this->widget('ImperaviRedactorWidget', array(
-            
+<?php
+		 
+ $this->widget('ImperaviRedactorWidget', array(
+            // You can either use it for model attribute
             'model' => $model,
             'attribute' => 'text',
 
@@ -82,5 +83,4 @@ imperavi elfinder
         )); 
 
 
-		
-</code>
+		 ?>
