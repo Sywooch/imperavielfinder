@@ -10,7 +10,11 @@ imperavi elfinder
 
 Скопировать содержимое в папку `protected/extensions`
 
-2 Подлкючение imperavi редактора
+Использование
+-----
+
+Предположим у нас есть модуль `admin`, Контроллер `PostController`, модель `Post` и view `post/edit` для модели `Post`.
+Кроме этого у нас есть контроллер `FileController` в котором прописаны `action` для imperavi.
 
 <?php
 		 
