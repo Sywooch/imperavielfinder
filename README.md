@@ -126,6 +126,16 @@ $connectorOptions = array(
 
 <b>Важно чтобы параметр `mimeDetect` был установлен, иначе будет ошибка соединения.
 
+Чтобы поменять иконку для elfinder идем в файл `redactor.js` (строчка 2684) тут я подключаю класс для кнопки с font иконкой
+```js
+if (btnName =='elfinder') {
+				var $button = $('<a href="javascript:;" title="' + btnObject.title + '" tabindex="-1" class="fa fa-folder"></a>');
+			}
+			else {
+				var $button = $('<a href="javascript:;" title="' + btnObject.title + '" tabindex="-1" class="re-icon re-' + btnName + '"></a>');
+			}
+```
+
 
 
 
