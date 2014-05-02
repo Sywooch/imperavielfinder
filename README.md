@@ -1,13 +1,14 @@
-imperavielfinder
+imperavi-elfinder
 ================
 
 imperavi elfinder
 
 Интеграция wysiwyg редактора  <a href="https://github.com/yiiext/imperavi-redactor-widget">imperavi</a>  и файлового менеджера  <a href="https://github.com/ezze/ezze-elfinder">elfinder</a>
 
-<b>Использование</b>
+Установка
+------------
 
-1 Скопировать содержимое в папку extensions
+Скопировать содержимое в папку `protected/extensions`
 
 2 Подлкючение imperavi редактора
 
