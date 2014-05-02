@@ -104,3 +104,36 @@ $this->widget("application.extensions.ezzeelfinder.ElFinderWidget", array(
     ),
 ));
 ```
+
+4 В файле `ElFinderConnectorAction` прописываем параметры подключения
+
+```php
+$connectorOptions = array(
+            'roots' => array(
+                array(
+                    'driver'  => "LocalFileSystem",
+                    'path' => realpath(Yii::app()->basePath.'/../file'),
+                    'URL' => Yii::app()->request->baseUrl .'/file',
+                    'accessControl' => "access",
+                    'mimeDetect' => "internal",
+                    'resizable' => true,
+                    'locale' => 'ru_RU.UTF-8',
+                )   
+            )
+
+        );
+```
+
+<b>Важно чтобы параметр `mimeDetect` был установлен, иначе будет ошибка соединения.
+
+
+
+
+
+
+
+
+
+
+
+
