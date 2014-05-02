@@ -93,6 +93,8 @@ public function actions()
 ```
 3 в тоже view файле `post/edit` подключаем elfinder, для это добавляем в файл контейнер и сам виджет
 
+`<div id="file-uploader"></div>`
+
 ```php
 $this->widget("application.extensions.ezzeelfinder.ElFinderWidget", array(
     'selector' => "div#file-uploader",
