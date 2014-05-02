@@ -16,11 +16,29 @@ imperavi elfinder
 Предположим у нас есть модуль `admin`, Контроллер `PostController`, модель `Post` и view `post/edit` для модели `Post`.
 Кроме этого у нас есть контроллер `FileController` в котором прописаны `action` для imperavi.
 
+1 Пропишем `actions` для `FileController`, нас интересует action `fileUploaderConnector`
 
-1 в view `post\edit` подключаем виджет imperavi:
+```php
+public function actions()
+    {
+        return array(
+            
 
-<?php
-		 
+			'fileUploaderConnector'=>array(
+			'class'=>'application.extensions.ezzeelfinder.ElFinderConnectorAction',
+			
+			),
+           
+            
+        );
+    }
+```
+
+
+2 в view `post\edit` подключаем виджет imperavi:
+
+
+```php
  $this->widget('ImperaviRedactorWidget', array(
             // You can either use it for model attribute
             'model' => $model,
@@ -64,24 +82,6 @@ imperavi elfinder
                 // 'iframe' => true,
                 'toolbar' => true,
 
-                'fileUpload'=>Yii::app()->createUrl('/admin/file/fileUpload',array(
-                'attr'=>$attribute
-                )),
-                'fileUploadErrorCallback'=>new CJavaScriptExpression(
-                'function(obj,json) { alert(json.error); }'
-                ),
-                'imageUpload'=>Yii::app()->createUrl('/admin/file/imageUpload',array(
-                'attr'=>$attribute
-                )),
-                'imageGetJson'=>Yii::app()->createUrl('/admin/file/imageList',array(
-                'attr'=>$attribute
-                )),
-                'imageUploadErrorCallback'=>new CJavaScriptExpression(
-                'function(obj,json) { alert(json.error); }'
-                ),
-                // 'shortcuts'=>'true',
-                // 'cleanup'=>true,
-               
                 'fmUrl'=>Yii::app()->createUrl('/admin/file/fileUploaderConnector'),
                
                 
@@ -90,5 +90,5 @@ imperavi elfinder
             ),
         )); 
 
+```
 
-		 ?>
